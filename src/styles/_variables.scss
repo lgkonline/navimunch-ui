@@ -23,8 +23,7 @@ $spacing-2: 100px;
 
 @mixin light-theme() {
     --body-bg: #f4f4f4;
-    --body-bg-pill-mode: #{rgba(#f4f4f4, .8)};
-    --body-bg-stronger: #{rgba($dark-grey,.1)};
+    --bg-stronger: #{rgba($white,.4)};
     --control-bg: #{rgba($dark-grey,.05)};
 
     --body-color: #{rgba($dark-grey,.5)};
@@ -36,9 +35,8 @@ $spacing-2: 100px;
 }
 
 @mixin dark-theme() {
-    --body-bg: #151d22;
-    --body-bg-pill-mode: #{rgba(#151d22, .8)};
-    --body-bg-stronger: #{rgba($white,.3)};
+    --body-bg: #000;
+    --bg-stronger: #{rgba($white,.1)};
     --control-bg: #{rgba($white,.15)};
 
     --body-color: #{rgba($white,.5)};
@@ -46,7 +44,7 @@ $spacing-2: 100px;
     --active-color: #{rgba($white, .9)};
 
     --neumorphism-shadow-color: #090d0f;
-    --neumorphism-light-color: #1f2a32;
+    --neumorphism-light-color: #1b1b1b;
 }
 
 body {
@@ -54,7 +52,7 @@ body {
 
     --primary-normal: #{$primary};
     --primary-hover: #{$lighter-primary};
-    --secondary-normal: var(--body-bg-stronger);
+    --secondary-normal: var(--bg-stronger);
     --secondary-hover: var(--front-color);
 
     --neumorphism-shadow: 35px 35px 63px var(--neumorphism-shadow-color), -35px -35px 63px var(--neumorphism-light-color);

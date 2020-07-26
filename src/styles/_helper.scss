@@ -16,7 +16,7 @@
     }
 
     &.secondary {
-        background-color: var(--body-bg-stronger);
+        background-color: var(--bg-stronger);
         color: var(--front-color) !important;
 
         &:hover {
@@ -34,4 +34,42 @@
         outline: none;
         box-shadow: 0 0 0 0.2rem rgba($primary,.5);
     }
+}
+
+.container {
+    padding: 0 calc(50% - 38rem);
+    margin: 0 1rem;
+}
+
+.container-fluid {
+    padding: 1rem;
+}
+
+.shadow {
+    box-shadow: var(--neumorphism-shadow) !important;
+}
+
+.shadow-sm {
+    box-shadow: var(--neumorphism-shadow-sm) !important;
+}
+
+.rounded {
+    border-radius: 1rem !important;
+}
+
+.rounded-circle {
+    border-radius: 50% !important;
+}
+
+ul.reset,
+ul.reset li,
+ul.reset ul li {
+   margin:0;
+   padding: 0;
+   text-indent: 0;
+   list-style-type: none;
+}
+
+.bg-stronger {
+    background-color: var(--bg-stronger) !important;
 }

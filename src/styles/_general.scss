@@ -7,10 +7,6 @@ body {
     margin: 0;
     background-color: var(--body-bg);
     color: var(--body-color);
-
-    &.pill-mode {
-        background-color: var(--body-bg-pill-mode);
-    }
 }
 
 button, input, textarea {

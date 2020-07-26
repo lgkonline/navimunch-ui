@@ -1,7 +1,8 @@
 import React from "react";
-import { IList, IListMode } from "../shared/types";
+import { IList, IListMode, IListItem } from "../shared/types";
 import classNames from "classnames";
-import { DashCircle, Square, Pencil, Cart } from "react-bootstrap-icons";
+import { Pencil, Cart } from "react-bootstrap-icons";
+import { ListItem } from "./ListItem";
 
 export interface IListProps extends IList {
     mode: IListMode;
@@ -10,24 +11,19 @@ export interface IListProps extends IList {
 
 export const List = ({ title, items, mode, toggleMode }: IListProps) => {
     return (
-        <>
-            <h2>{title}</h2>
+        <div className="shadow rounded p-3 bg-stronger">
+            <h2 className="mt-0">{title}</h2>
 
-            <ul>
-                {items.map((item: string, key: number) =>
-                    <li key={key}>
-                        {mode === "edit" ?
-                            <DashCircle />
-                            : <Square />}
-                        {item}
-                    </li>
+            <ul className="reset">
+                {items.map((item: IListItem, key: number) =>
+                    <ListItem key={key} {...item} mode={mode} />
                 )}
             </ul>
 
-            <div>
-                <button className={classNames("btn", { "active": mode === "edit" })} onClick={toggleMode}><Pencil /></button>
+            <div className="mt-3">
+                <button className={classNames("btn mr-1", { "active": mode === "edit" })} onClick={toggleMode}><Pencil /></button>
                 <button className={classNames("btn", { "active": mode === "shopping" })} onClick={toggleMode}><Cart /></button>
             </div>
-        </>
+        </div>
     );
 };

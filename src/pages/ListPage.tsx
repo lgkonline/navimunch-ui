@@ -20,12 +20,16 @@ export const ListPage = () => {
         console.log(data);
         setList({
             title: "New list",
-            items: ["Nutella", "Müsli", "Mehl"]
+            items: [
+                { label: "Nutella" },
+                { label: "Müsli" },
+                { label: "Mehl" }
+            ]
         });
     }
 
     return (
-        <div className="ListPage">
+        <div className="ListPage container-fluid">
             {list ?
                 <List
                     {...list}
